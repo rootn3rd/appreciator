@@ -32,7 +32,7 @@ export class AppComponent {
   currentUserRefId: any = null;
   currentUserDoc: AngularFirestoreDocument<any>;
 
-  constructor(private db: AngularFirestore, private afAuth: AngularFireAuth) {
+  constructor(private db: AngularFirestore, public afAuth: AngularFireAuth) {
 
     this.userCollection = db.collection<any>('users');
     this.allUsers$ = this.userCollection.snapshotChanges().map(s => {

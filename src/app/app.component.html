@@ -15,7 +15,8 @@
   <p class="users">Users :</p>
   <ul>
     <li class="text" *ngFor="let user of otherUsers">
-      {{user.id}} => {{user.name}} : {{user.appreciationCounter}}
+      <!-- {{user.id}} => {{user.name}} : {{user.appreciationCounter}} -->
+      {{user.name}} : {{user.appreciationCounter}}
       <button (click)="appreciate(user)">Appreciate</button>
     </li>
   </ul>
